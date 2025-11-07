@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <link rel="icon" href="data:,">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Examen DWEC UD1-UD3: Fiesta en Fondo de Bikini</title>
+  <script type="module" src="js/index.js"></script>
+  <style>
+ 
+    :root{
+      --bg-1: #8fd3f4;   
+      --bg-2: #84fab0;   
+      --ink: #0b2b33;
+      --accent: #ffd34d; 
+      --btn: #003a46;    
+      --btn-ink: #fff;
+      --card: rgba(255,255,255,.85);
+      --shadow: 0 10px 30px rgba(0,0,0,.15);
+      --radius: 18px;
+    }
+        body {
+        margin: 0;
+        min-height: 100dvh;
+        color: var(--ink);
+        background-image: url("./fondo.jpeg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, Noto Sans, Arial;
+        }
+
+    .wrap{
+      max-width: 960px; margin-inline:auto; padding: 40px 20px; display:grid; gap: 22px;
+    }
+
+    .card{
+      background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow);
+      padding: 28px; backdrop-filter: blur(6px);
+    }
+
+    header{
+      text-align:center;
+    }
+
+    h1{
+      margin: 0 0 8px; font-size: clamp(1.6rem, 2.4vw + 1rem, 2.6rem);
+      line-height:1.1; letter-spacing: .3px;
+    }
+
+    .subtitle{
+      margin: 0; opacity:.9; font-size: .98rem;
+    }
+
+    .btns{
+      display:grid; grid-template-columns: repeat(auto-fit, minmax(180px,1fr)); gap: 14px; margin-top: 10px;
+    }
+
+    button{
+      appearance:none; border:0; border-radius: 14px; padding: 14px 16px;
+      background: var(--btn); color: var(--btn-ink); font-weight: 600; letter-spacing:.2px;
+      cursor:pointer; box-shadow: 0 6px 16px rgba(0,0,0,.18);
+      transition: transform .06s ease, box-shadow .2s ease, opacity .2s ease;
+    }
+
+    button:hover{ transform: translateY(-1px); box-shadow: 0 8px 20px rgba(0,0,0,.2); }
+    button:active{ transform: translateY(0); box-shadow: 0 4px 12px rgba(0,0,0,.16); }
+
+    .muted{ opacity:.7; font-size:.95rem; }
+
+    footer{ text-align:center; opacity:.75; font-size:.9rem; padding-bottom: 6px; }
+    code{ background: rgba(0,0,0,.06); padding: 2px 6px; border-radius: 6px; }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="card" role="region" aria-labelledby="titulo-examen">
+      <header>
+        <h2 id="titulo-examen">Examen DWEC UD1-UD3</h2>
+        <h1 id="titulo-examen">Fiesta en Fondo de Bikini</h1>
+        <p class="subtitle">HTML base <strong>sin funcionalidad</strong> (el alumnado completará la lógica en JS).</p>
+      </header>
+
+      <div class="btns" role="group" aria-label="Acciones del examen">
+        <button id="crearObjetos" aria-label="Crear objetos">Crear objetos</button>
+        <button id="verHumanos" aria-label="Mostrar humanos">Mostrar humanos</button>
+        <button id="verAnimales" aria-label="Mostrar animales">Mostrar animales</button>
+        <button id="verFiesta" aria-label="Mostrar fiesta">Mostrar fiesta</button>
+      </div>
+    </section>
+
+ 
+
+    <footer class="muted">
+
+      <p>
+        DWEC - 21/11/2025
+      </p>
+    </footer>
+  </main>
+</body>
+</html>
